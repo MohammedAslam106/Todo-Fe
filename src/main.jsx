@@ -5,8 +5,8 @@ import './index.css'
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import { AuthProvider } from './AuthContext/authContext.jsx'
 import ProtectedRoute from './ProtectedRoute/ProtectedRoute.jsx'
-import Signin from './components/signin.jsx'
-import Signup from './components/signup.jsx'
+import Signin from './components/Signin.jsx'
+import Signup from './components/Signup.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
