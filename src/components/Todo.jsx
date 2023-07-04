@@ -29,7 +29,7 @@ const Todo=({todo,setCountEdit})=>{
 
     
     return(
-        <div className={`py-5 flex items-center justify-between mb-5 border-2 rounded-xl ${(todo.dueDate.slice(0,10) < new Date().toISOString().slice(0,10)) && ' bg-red-100'}`}>
+        <div className={`py-5 flex items-center justify-between mb-5 border-2 rounded-xl ${(todo.dueDate.slice(0,10) < new Date().toISOString().slice(0,10)) && ' bg-red-100'} mx-1`}>
             <h1 className=" mx-7">{todo.title}</h1>
             <div className="flex items-center gap-5 mx-7">
                 <h3 className=''>Due on: {todo.dueDate?.slice(0,10).split("-").reverse().join("-")}</h3>

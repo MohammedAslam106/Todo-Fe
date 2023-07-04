@@ -52,8 +52,13 @@ export const AuthProvider=({children})=>{
             return false
         }
     }
+    const signout=()=>{
+        console.log('logging out')
+        localStorage.clear()
+        location.reload()
+    }
     return(
-        <AuthContext.Provider value={{currentUser, signin, signup}}>
+        <AuthContext.Provider value={{currentUser, signin, signup,signout}}>
             {children}
         </AuthContext.Provider>
     )

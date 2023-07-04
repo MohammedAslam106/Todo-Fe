@@ -8,6 +8,9 @@ import { AuthContext } from './AuthContext/authContext'
 import { useContext } from 'react'
 
 
+import {GoSignOut} from 'react-icons/go'
+
+
 function App() {
   // const Todos=[{title:'todo 1',description:"description 1",dueDate:'6/11/2023'},{title:'todo 2',description:"description 2",dueDate:'6/11/2023'},{title:'todo 3',description:"description 3",dueDate:'6/11/2023'}]
   const {currentUser}=useContext(AuthContext)
@@ -15,6 +18,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [countEdit,setCountEdit]=useState(0)
   const [search,setSearch]=useState('')
+  const {signout}=useContext(AuthContext)
   const BASE_URL=import.meta.env.VITE_BASE_URL
 
   useEffect(()=>{
@@ -61,9 +65,12 @@ function App() {
         >
           Create Todo
         </button>
+          <button onClick={()=>signout()} className=' absolute bottom-5 right-5 bg-blue-400 rounded shadow-sm p-2 hover:bg-blue-300'>
+            <GoSignOut size={35}/>
+          </button>
       </div>
         <TodoModal setIsOpen={setIsOpen} isOpen={isOpen}/>
-        <div className=''>
+        <div >
           {todos?.map((todo,ind)=>{
             // console.log(todo.dueDate,new Date().toISOString())
             
