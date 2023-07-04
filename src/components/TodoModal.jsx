@@ -1,7 +1,7 @@
 
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment,  useEffect,  useState } from 'react'
-import { AuthContext } from '../../context/authContext'
+import { AuthContext } from '../AuthContext/authContext'
 import { useContext } from 'react'
 
 // eslint-disable-next-line react/prop-types

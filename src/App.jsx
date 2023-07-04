@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Todo from './components/Todo'
 import TodoModal from './components/TodoModal'
-import { AuthContext } from '../context/authContext'
+import { AuthContext } from './AuthContext/authContext'
 import { useContext } from 'react'
 
 

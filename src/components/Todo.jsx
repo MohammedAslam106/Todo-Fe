@@ -2,7 +2,7 @@
 import { useContext, useState } from "react";
 import TodoModal from "./TodoModal";
 import Togal from "./Togal";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext } from "../AuthContext/authContext";
 
 
 const Todo=({todo,setCountEdit})=>{

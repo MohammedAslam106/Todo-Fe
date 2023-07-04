@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext } from "../AuthContext/authContext";
 import { Navigate, useNavigate } from "react-router-dom";
 const Signin=()=>{
     const {signin}=useContext(AuthContext)
