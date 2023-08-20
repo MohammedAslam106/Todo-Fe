@@ -7,6 +7,7 @@ import { AuthProvider } from './AuthContext/authContext.jsx'
 import ProtectedRoute from './ProtectedRoute/ProtectedRoute.jsx'
 import Signin from './components/Signin.jsx'
 import Signup from './components/Signup.jsx'
+import NotFound from './components/NotFound.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </Route>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/signin' element={<Signin/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
